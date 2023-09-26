@@ -16,6 +16,7 @@ body {
     right: 100%;
     left: 0;
     animation: color 1s infinite linear;
+    transition: right .3s ease;
 }
 @keyframes color {
 	0%   { background: #33CCCC; color: white;}
