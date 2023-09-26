@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+body {
+    background-color: #0f0815;
+}
+.contagem-background {
+    position: absolute;
+    border: 5px solid black;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    animation: color 1s infinite linear;
+}
+@keyframes color {
+	0%   { background: #33CCCC; color: white;}
+	20%  { background: #33CC36;}
+	40%  { background: #B8CC33; color: black;}
+	60%  { background: #FCCA00; color: black;}
+	80%  { background: #33CC36;}
+	100% { background: #33CCCC; color: white;}
+}
+h1 {
+    font-size: 5rem;
+    font-weight: normal;
+    background-color: #f8f8f8;
+    border-bottom: 5px solid gray;
+    width: 55%;
+    text-align: center;
+    padding: .5rem 0;
+    border-radius: 50%;
+}
+section {
+    display: flex;
+    width: 13.5rem;
+    justify-content: space-between;
+    border-radius: 100px;
+    position: relative;
+    animation: voando .8s infinite linear;
+}
+@keyframes voando {
+    0% {transform: translate(0, 0);}
+    25% {transform: translate(0, -3px);}
+    50% {transform: translate(0, 0);}
+    65% {transform: translate(0, 2px);}
+}
+.numero {
+    display: flex;
+    z-index: +2;
+    width: 100%;
+    justify-content: center;
+    padding: 2rem 0;
+    border-radius: 100px;
+    background-color: rgb(218, 218, 218);
+    user-select: none;
+    border-bottom: 10px solid rgb(151, 151, 151);
+    border-top: 10px solid white;
+    box-shadow: 0 5px 10px black;
+}
+.mais, .menos {
+    display: flex;
+    align-items: center;
+    font-size: 1.75rem;
+    position: absolute;
+    color: white;
+    padding: .75rem;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 5px 5px black;
+}
+.mais {
+    border-radius: 0 100px 100px 0;
+    right: -40px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    justify-content: end;
+    background-color: rgb(190, 10, 10);
+    border-bottom: 15px solid rgb(121, 0, 0);
+    border-top: 10px solid red;
+}
+.mais:active {
+    border-bottom: none;
+    background-color: rgb(179, 8, 8);
+    border-top: 10px solid rgb(121, 0, 0);
+}
+.menos {
+    border-radius: 100px 0 0 100px;
+    left: -40px;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    background-color: rgb(19, 10, 190);
+    border-bottom: 15px solid rgb(24, 0, 121);
+    border-top: 10px solid blue;
+}
+.menos:active {
+    border-bottom: none;
+    background-color: rgb(16, 7, 173);
+    border-top: 10px solid rgb(24, 0, 121);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+@media (max-width: 400px) {
+    section {
+        width: 9rem;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+}
